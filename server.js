@@ -11,6 +11,6 @@ app.listen(process.env.PORT || 5000, function (err) {
 
 app.get('/', function(req, res) {
     console.log("GET Request received");
-    res.sendFile(__dirname + "pokemon_api_30.json");
+    res.sendFile("pokemon_api_30.json");
   })
 
