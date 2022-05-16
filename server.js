@@ -56,8 +56,8 @@ const typeSchema = new mongoose.Schema({
     pokemon: Array
 })
 
-const pokemonModel = mongoose.model("pokemon_by_id", pokemonSchema);
-const typeModel = mongoose.model("pokemon_by_type", typeSchema);
+const pokemonModel = mongoose.model("pokemon_by_ids", pokemonSchema);
+const typeModel = mongoose.model("pokemon_by_types", typeSchema);
 
 
 app.use(bodyparser.urlencoded({
