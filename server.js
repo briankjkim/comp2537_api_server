@@ -90,7 +90,7 @@ app.get('/pokemon_by_id/:id', function (req, res) {
 })
 
 // READ pokemon api with type_id from the server with GET Request
-app.get('/pokemon_by_type/:type_id', function (req, res) {
+app.get('/pokemon_by_type/:id', function (req, res) {
     let type_id = req.params.id
     console.log(`Received a GET request for ${type_id}`);
     typeModel.find({'id': type_id}, function (err, data) {
