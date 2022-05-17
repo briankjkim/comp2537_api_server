@@ -99,6 +99,6 @@ app.get('/pokemon_by_type/:id', function (req, res) {
         } else {
             console.log("Data " + data);
         }
-        res.send(JSON.stringify(data));
+        res.send(data);
     });
 })
