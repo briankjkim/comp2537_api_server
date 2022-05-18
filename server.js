@@ -56,8 +56,17 @@ const typeSchema = new mongoose.Schema({
     pokemon: Array
 })
 
+const habitatSchema = new mongoose.Schema({
+    id: Number,
+    name: String,
+    names: Array,
+    pokemon_species: Array,
+})
+
+
 const pokemonModel = mongoose.model("pokemon_by_ids", pokemonSchema);
 const typeModel = mongoose.model("pokemon_by_types", typeSchema);
+const habitatModel = mongoose.model("pokemon_by_habitats", habitatSchema);
 
 
 app.use(bodyparser.urlencoded({
