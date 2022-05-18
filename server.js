@@ -111,3 +111,18 @@ app.get('/pokemon_by_type/:id', function (req, res) {
         res.send(data);
     });
 })
+
+
+// READ pokemon api with habitat_id from the server with GET Request
+app.get('/pokemon_by_habitat/:id', function (req, res) {
+    let habitat_id = req.params.id
+    console.log(`Received a GET request for ${habitat_id}`);
+    habitatModel.find({'id': habitat_id}, function (err, data) {
+        if (err) {
+            console.log("Error " + err);
+        } else {
+            console.log("Data " + data);
+        }
+        res.send(data);
+    });
+})
