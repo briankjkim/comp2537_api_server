@@ -76,14 +76,6 @@ app.use(bodyparser.urlencoded({
 }));
 
 
-
-// app.get('/:id', function (req, res) {
-//     let id = req.params.id;
-//     console.log("GET Request received");
-//     res.sendFile(__dirname + `/${id}.json`);
-// })
-
-
 // READ pokemon api with id from the server with GET Request
 app.get('/pokemon_by_id/:id', function (req, res) {
     let pokemon_id = req.params.id
